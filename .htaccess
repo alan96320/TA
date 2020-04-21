@@ -1,0 +1,100 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteBase /public_html/TA/
+RewriteRule ^masuk$ ?c=Controller&m=login [L]
+RewriteRule ^prosesMasuk$ ?c=Controller&m=proses_login [L]
+RewriteRule ^keluar$ ?c=Controller&m=logout [L]
+RewriteRule ^Home$ ?c=Controller&m=Dashboard [L]
+
+#rules untuk user
+RewriteRule ^Users$ ?c=Controller&m=users [L]
+RewriteRule ^addUsers$ ?c=Controller&m=addUsers [L]
+RewriteRule ^jabatan$ ?c=Controller&m=setjabatan [L]
+RewriteRule ^perusahaan$ ?c=Controller&m=setperusahaan [L]
+RewriteRule ^delUser$ ?c=Controller&m=delUser [L]
+RewriteRule ^editUsers$ ?c=Controller&m=editUser [L]
+RewriteRule ^getUser$ ?c=Controller&m=getUser [L]
+
+
+
+#rules untuk perusahaan
+RewriteRule ^Companies$ ?c=Controller&m=Companies [L]
+RewriteRule ^addcompany$ ?c=Controller&m=addcompany [L]
+RewriteRule ^delCompany$ ?c=Controller&m=delCompany [L]
+RewriteRule ^editcompany$ ?c=Controller&m=editcompany [L]
+RewriteRule ^getCompany$ ?c=Controller&m=getCompany [L]
+
+#rules untuk Harga
+RewriteRule ^Harga$ ?c=Controller&m=Harga [L]
+RewriteRule ^addHarga$ ?c=Controller&m=addHarga [L]
+RewriteRule ^delHarga$ ?c=Controller&m=delHarga [L]
+RewriteRule ^EditHarga$ ?c=Controller&m=editHarga [L]
+
+#rules untuk Bobot
+RewriteRule ^Bobot$ ?c=Controller&m=Bobot [L]
+RewriteRule ^getBobot$ ?c=Controller&m=getBobot [L]
+RewriteRule ^addBobot$ ?c=Controller&m=addBobot [L]
+RewriteRule ^delBobot$ ?c=Controller&m=delBobot [L]
+RewriteRule ^EditBobot$ ?c=Controller&m=editBobot [L]
+
+#rules untuk proyek
+RewriteRule ^Proyek$ ?c=Controller&m=Proyek [L]
+RewriteRule ^GetProyek$ ?c=Controller&m=GetProyek [L]
+RewriteRule ^getpembangunan$ ?c=Controller&m=getpembangunan [L]
+RewriteRule ^getBlok$ ?c=Controller&m=getBlok [L]
+RewriteRule ^Reset$ ?c=Controller&m=Reset [L]
+RewriteRule ^saveblok$ ?c=Controller&m=saveblok [L]
+RewriteRule ^hapusblok$ ?c=Controller&m=hapusblok [L]
+RewriteRule ^savePembangunan$ ?c=Controller&m=savePembangunan [L]
+RewriteRule ^hapuspembangunan$ ?c=Controller&m=hapuspembangunan [L]
+RewriteRule ^saveproyek$ ?c=Controller&m=saveproyek [L]
+RewriteRule ^hapusproyek$ ?c=Controller&m=hapusproyek [L]
+RewriteRule ^getProyekByID$ ?c=Controller&m=getProyekByID [L]
+RewriteRule ^blokPerIDPembangunan$ ?c=Controller&m=blokPerIDPembangunan [L]
+RewriteRule ^hapusBlokPerID$ ?c=Controller&m=hapusBlokPerID [L]
+RewriteRule ^hapusAllBlokEdit$ ?c=Controller&m=hapusAllBlokEdit [L]
+RewriteRule ^editproyek$ ?c=Controller&m=editproyek [L]
+
+#rules untuk Pengajuan
+RewriteRule ^Pengajuan$ ?c=Controller&m=Pengajuan [L]
+RewriteRule ^getpembangunanProgres$ ?c=Controller&m=getpembangunanProgres [L]
+RewriteRule ^getblokProgres$ ?c=Controller&m=getblokProgres [L]
+RewriteRule ^getnomorProgres$ ?c=Controller&m=getnomorProgres [L]
+RewriteRule ^cancelpengajuan$ ?c=Controller&m=cancelpengajuan [L]
+RewriteRule ^temporaryProgres$ ?c=Controller&m=temporaryProgres [L]
+RewriteRule ^hapusProgresTemorary$ ?c=Controller&m=hapusProgresTemorary [L]
+RewriteRule ^getProgresTemoraryperID$ ?c=Controller&m=getProgresTemoraryperID [L]
+RewriteRule ^getnomorProgresPerID$ ?c=Controller&m=getnomorProgresPerID [L]
+RewriteRule ^savePerUnit$ ?c=Controller&m=savePerUnit [L]
+RewriteRule ^saveDataTemporary$ ?c=Controller&m=saveDataTemporary [L]
+RewriteRule ^viewpembangunan$ ?c=Controller&m=viewpembangunan [L]
+RewriteRule ^temporaryPembangunanPerID$ ?c=Controller&m=temporaryPembangunanPerID [L]
+RewriteRule ^hapusPengajuanTemoraryPerID$ ?c=Controller&m=hapusPengajuanTemoraryPerID [L]
+RewriteRule ^saveTemporarypengajuan$ ?c=Controller&m=saveTemporarypengajuan [L]
+RewriteRule ^viewPengajuan$ ?c=Controller&m=viewPengajuan [L]
+RewriteRule ^lihatpengajuan$ ?c=Controller&m=lihatpengajuan [L]
+
+
+#rules untuk Pemeriksaan
+RewriteRule ^Pemeriksaan$ ?c=Controller&m=Pemeriksaan [L]
+RewriteRule ^lihatpemeriksaan$ ?c=Controller&m=lihatpemeriksaan [L]
+RewriteRule ^approvePemeriksaan$ ?c=Controller&m=approvePemeriksaan [L]
+RewriteRule ^rejectPemeriksaan$ ?c=Controller&m=rejectPemeriksaan [L]
+
+#rules untuk export
+RewriteRule ^exportUser$ ?c=Controller&m=exportUser [L]
+RewriteRule ^exporCompany$ ?c=Controller&m=exporCompany [L]
+RewriteRule ^exporPekerjaan$ ?c=Controller&m=exporPekerjaan [L]
+RewriteRule ^exporProyek$ ?c=Controller&m=exporProyek [L]
+RewriteRule ^ExportPengajaun$ ?c=Controller&m=ExportPengajaun [L]
+RewriteRule ^ExportPDF$ ?c=Controller&m=ExportPDF [L]
+
+
+#rules untuk bar
+RewriteRule ^getDataBar$ ?c=Controller&m=getDataBar [L]
+
+#rules untuk profile
+RewriteRule ^profile$ ?c=Controller&m=profile [L]
+RewriteRule ^editProfile$ ?c=Controller&m=editProfile [L]

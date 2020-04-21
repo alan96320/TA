@@ -1,0 +1,219 @@
+
+ul, li {
+	margin: 0px;
+	list-style-type: none;
+}
+
+table{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+table thead{
+    font-size: 14px;
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h4{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+
+.side-nav{
+    height:100%;
+    width: 200px;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:#111;
+    opacity:0.9;
+    overflow-x:hidden;
+  }
+
+p {
+    font-family: Ubuntu-Regular, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    font-family: 'Times New Roman', Times, serif;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    padding: 10px;
+    background: #34363fd5;
+    height: 50px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 2px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 12px;
+    display: block;
+    font-family: Ubuntu-Regular, sans-serif;
+    font-weight: bold;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #34363fd5;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 12px !important;
+    padding-left: 30px !important;
+    background: #34363fd5;
+    font-family: Ubuntu-Regular, sans-serif;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 12px !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/*desain untuk loading simpan*/
+  .body-loading{
+        margin: 0;
+        margin-top: -20px;
+        padding: 0;
+        background: #43454b;
+        height: 86vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "montserrat",sans-serif;
+    }
+    .loading, .loading-awal{
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-top:10px solid #e74c3c;
+        position: relative;
+        animation: a1 2s linear infinite;
+    }
+    .loading::before,.loading::after,.loading-awal::before,.loading-awal::after{
+        content: '';
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+    .loading::before, .loading-awal::before{
+        border-top: 10px solid #e67e22;
+        transform: rotate(120deg);
+    }
+    .loading::after, .loading-awal::after{
+        border-top: 10px solid #3498db;
+        transform: rotate(240deg);
+    }
+    .loading span, .loading-awal span{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        font-size: 20px;
+        animation: a2 2s linear infinite;
+    }
+    @keyframes a1{
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes a2{
+        to{
+            transform: rotate(-360deg);
+        }
+    }
+    .tampilan{
+        animation-name: animatebottom;
+        animation-duration: 1s;
+        position: relative;
+    }
+    @keyframes animatebottom{
+        from{bottom: -100px; opacity: 0;}
+        to{bottom: 0px; opacity: 1;}
+    }

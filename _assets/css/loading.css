@@ -1,0 +1,168 @@
+/*taro sekrip ini di html untuk desain loading pertama*/
+	/*<div class="body-loading" id="loading-awal">
+	    <div class="loading-awal">
+	        <span>Loading...</span>
+	    </div>
+	</div>*/
+/*akhir skrip*/
+
+/*desain untuk loading simpan*/
+  .body-loading{
+        margin: 0;
+        margin-top: -20px;
+        padding: 0;
+        /*background: #43454b;*/
+        height: 92.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "montserrat",sans-serif;
+    }
+    .loading, .loading-awal{
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-top:10px solid #e74c3c;
+        position: relative;
+        animation: a1 2s linear infinite;
+    }
+    .loading::before,.loading::after,.loading-awal::before,.loading-awal::after{
+        content: '';
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+    .loading::before, .loading-awal::before{
+        border-top: 10px solid #e67e22;
+        transform: rotate(120deg);
+    }
+    .loading::after, .loading-awal::after{
+        border-top: 10px solid #3498db;
+        transform: rotate(240deg);
+    }
+    .loading span, .loading-awal span{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        font-size: 20px;
+        animation: a2 2s linear infinite;
+    }
+    @keyframes a1{
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes a2{
+        to{
+            transform: rotate(-360deg);
+        }
+    }
+    .tampilan{
+        animation-name: animatebottom;
+        animation-duration: 1s;
+        position: relative;
+    }
+    @keyframes animatebottom{
+        from{bottom: -100px; opacity: 0;}
+        to{bottom: 0px; opacity: 1;}
+    }
+
+/*desain loading ke dua*/
+
+/*ini skrip htmlnya*/
+	/*<div class="bodyLoading">
+	    <div class="loading_2">
+	        <h2 class="loading_header">mohon ditunggu ya...</h2>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <h2 class="loading_footer">lagi ngeload data nih...</h2>
+	    </div>
+	</div>*/
+/*akhir skrip html nya*/
+
+/*ini untuk css loadng kedua*/
+	.bodyLoading {
+		background: #dddce1;
+		text-align: center;
+		align-items: center;
+        justify-content: center;
+		transition: width 0.25s ease, margin 0.25s ease;
+		width: calc(100% - 50px);
+		min-height: calc(100vh - 70px);
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	.bodyLoading .loading_2 .loading_header{
+		padding-bottom: 10px;
+	}
+	.bodyLoading .loading_2 .loading_footer{
+		padding-top: 10px;
+	}
+	.bodyLoading .loading_2 .loading_header, .bodyLoading .loading_2 .loading_footer {
+		color: #8c8c8c;
+		margin: 0;
+		font: .9em verdana;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+	}
+	.bodyLoading .loading_2 span {
+		display: inline-block;
+		vertical-align: middle;
+		width: .7em;
+		height: .7em;
+		margin: .19em;
+		background: #007DB6;
+		border-radius: .6em;
+		animation: loading2 1s infinite alternate;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(2) {
+		background: #008FB2;
+		animation-delay: 0.2s;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(3) {
+		background: #009B9E;
+		animation-delay: 0.4s;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(4) {
+		background: #00A77D;
+		animation-delay: 0.6s;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(5) {
+		background: #00B247;
+		animation-delay: 0.8s;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(6) {
+		background: #5AB027;
+		animation-delay: 1.0s;
+	}
+	.bodyLoading .loading_2 span:nth-of-type(7) {
+		background: #A0B61E;
+		animation-delay: 1.2s;
+	}
+	/*
+	* Animation keyframes
+	* Use transition opacity instead of keyframes?
+	*/
+	@keyframes loading2 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}

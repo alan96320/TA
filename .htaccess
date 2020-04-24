@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule ^(.*)$ index.php/$1 [L]
-RewriteBase /public_html/TA/
+RewriteBase /public_html/Termin/
 RewriteRule ^masuk$ ?c=Controller&m=login [L]
 RewriteRule ^prosesMasuk$ ?c=Controller&m=proses_login [L]
 RewriteRule ^keluar$ ?c=Controller&m=logout [L]

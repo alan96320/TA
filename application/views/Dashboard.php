@@ -70,7 +70,7 @@
   		</div>
 		<footer class="footer">
   			<div class="d-sm-flex justify-content-center justify-content-sm-between">
-    			<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href="http://cepalansuhendar.000webhostapp.com/" target="_blank">Cep Alan Suhendar</a>. All rights reserved.</span>
+    			<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href="http://www.weseeskylive.com/" target="_blank">Cep Alan Suhendar</a>. All rights reserved.</span>
   			</div>
 		</footer>
 	</div>
@@ -146,7 +146,6 @@
         'rgba(75, 192, 192, 1)',
     ];
 	$.ajax({
-		type     : 'ajax',
         url      : 'getDataBar',
         async    : true,
         dataType : 'json',
